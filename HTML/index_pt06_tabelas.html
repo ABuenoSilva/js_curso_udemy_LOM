@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tabelas</title>
+    </head>
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        table td, table th {
+            border: 1px solid #ccc;
+            padding: 5px;
+            text-align: left;
+        }
+        table caption {
+            caption-side: bottom;
+            text-align: right;
+            font-style: italic;
+            font-size: 14px;
+            margin: 5px 0;
+        }
+        tfoot td, table th {
+            background: #ddd;
+        }
+        tfoot td {
+            font-style: italic;
+        }
+        .responsive-table {
+            max-width: 100%;
+            overflow-x: auto;
+        }
+    </style>
+    <body>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+        <div class="responsive-table">
+            <table>
+                <caption>Caption da tabela</caption>
+                <thead>
+                    <tr>
+                        <th>Título 1</th>
+                        <th>Título 2</th>
+                        <th>Título 3</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="2">Corpo 1 e 2</td>
+                        <td>Corpo 3</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">Corpo 4 e 7</td>
+                        <td>Corpo 5</td>
+                        <td>Corpo 6</td>
+                    </tr>
+                    <tr>
+                        <td>Corpo 8</td>
+                        <td>Corpo 9</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td>Foot 1</td>
+                        <td>Foot 2</td>
+                        <td>Foot 3</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </body>
+</html>
