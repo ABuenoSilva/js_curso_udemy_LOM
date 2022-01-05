@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+input:not(:checked) {
+    height: 50px;
+    width: 50px;
+}
+
+.nth-simple > li:nth-child(even) {
+    background-color: burlywood;
+}
+
+.nth-simple > li:nth-child(odd) {
+    background-color: lightcoral;
+}
+
+.nth-simple li:nth-child(2) {
+    background-color: aquamarine;
+}
+
+.nth-complex li:nth-child(3n) {
+    background-color: aquamarine;
+}
+
+.nth-complex li:nth-child(3n + 2) {
+    background-color: yellow;
+}

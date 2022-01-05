@@ -3,141 +3,39 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Formulários</title>
+        <title>Pseudo-classes - :not() e :nth-child()</title>
     </head>
-    <style>
-        body {
-            font-family: sans-serif;
-        }
-        label {
-            cursor: pointer;
-        }
-        textarea {
-            vertical-align: top;
-        }
-    </style>
+    <link rel="stylesheet" href="./assets/css/styles.css">
     <body>
-        <form action="#" method="get" target="_blank" autocomplete="off">
-            <!-- Exemplo das partes de formulário
-            <section>
-                <h1>Cabeçalho</h1>
-                <p>Formulário</p>
-                <fieldset>
-                    <legend>Descrição do Formulário</legend>
-                    <p>
-                        <input type="text">
-                    </p>
-                </fieldset>
-            </section>
-            -->
-            <p>O meu formulário</p>
-            <p>
-                <label for="nome">Nome</label>
-                <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
-            </p>
-            <p>
-                <label for="password">Nome</label>
-                <input type="password" id="password" name="password" placeholder="Digite sua senha" required>
-            </p>            
-            <p>
-                <label for="dev">Sou um dev</label>
-                <input type="checkbox" id="dev" name="dev" value="sim">
-            </p>
-            <p>
-                <label for="dev1">Sou um dev raiz</label>
-                <input type="checkbox" id="dev1" name="dev" value="sim">
-            </p>
-            <p>
-                <label for="dev2">Sou um dev nutella</label>
-                <input type="checkbox" id="dev2" name="dev" value="sim">
-            </p>
-            <p>
-                Gênero:
-                <p>
-                    <label for="feminino">Feminino</label>
-                    <input type="radio" id="dev3" name="genero" value="feminino">
-                </p>
-                <p>
-                    <label for="masculino">Masculino</label>
-                    <input type="radio" id="dev4" name="genero" value="masculino">
-                </p>
-                <p>
-                    <label for="dev2">Sou um dev nutella</label>
-                    <input type="radio" id="dev5" name="genero" value="nutella">
-                </p>
-            </p>
-            <p>
-                <label for="data">Data:</label>
-                <input type="date" id="data" name="data">
-            </p>
-            <p>
-                <label for="data">DateTime:</label>
-                <input type="datetime-local" id="datetime" name="datetime">
-            </p>
-            <p>
-                <label for="time">Time:</label>
-                <input type="time" id="time" name="time">
-            </p>            
-            <p>
-                <label for="cor">Cor:</label>
-                <input type="color" id="color" name="color">
-            </p>            
-            <p>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" placeholder="email@email.com">
-            </p>          
-            <p>
-                <label for="file">Sua foto:</label>
-                <input type="file" id="file" name="file">
-            </p>  
-            <p>
-                <label for="number">Email:</label>
-                <input type="number" id="number" name="number" placeholder="digite um número" min="5" max="50" step="5">
-            </p>         
-            <p>
-                <label for="url">URL:</label>
-                <input type="url" id="url" name="url" placeholder="URL" required>
-            </p>         
-            <p>
-                <label for="search">Busca:</label>
-                <input type="search" id="search" name="search" placeholder="Procure por algo">
-            </p>       
-            <p>
-                <label for="select">Selecione uma opção:</label>
-                <select id="select" name="select">
-                    <optgroup label="Grupo 1">
-                        <option value = "1" label="Valor 1" select></option>
-                        <option value = "2" label="Valor 2" disabled></option>
-                        <option value = "3" label="Valor 3"></option>    
-                    </optgroup>
-                    <optgroup label="Grupo 2">
-                        <option value = "4" label="Valor 4"></option>
-                        <option value = "5" label="Valor 5"></option>    
-                    </optgroup>
-                </select>
-            </p>        
-            <p>
-                <label for="textarea">Textarea:</label>
-                <textarea name="textarea" id="textarea" cols="30" rows="10">Valor padrão</textarea>
-            </p>                 
-            <p>
-                <label for="range">Range:</label>
-                <input type="range" id="range" name="range" min="2" max="10" step="2">
-                <!-- Range personalizado, é bugado ainda
-                <input type="range" id="range" name="range" list="marklist">
-                <datalist id="marklist">
-                    <option value = "20" label = "20%"></option>
-                    <option value = "40" label = "40%"></option>
-                    <option value = "60" label = "60%"></option>
-                    <option value = "80" label = "80%"></option>
-                    <option value = "100" label = "100%"></option>
-                </datalist>
-                --> 
-            </p>         
-                <button type="reset">Reset</button>
-                <button type="submit">Enviar</button>
-            </p>
+        <input type="checkbox" checked>
+    
+        <ul class="nth-simple">
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+            <li>Item 4</li>
+            <li>Item 5</li>
+            <li>Item 6</li>
+            <li>Item 7</li>
+            <li>Item 8</li>
+            <li>Item 9</li>
+            <li>Item 10</li>
+        </ul>
+        <br>
+        <br>
+        <ol class="nth-complex">
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+            <li>Item 4</li>
+            <li>Item 5</li>
+            <li>Item 6</li>
+            <li>Item 7</li>
+            <li>Item 8</li>
+            <li>Item 9</li>
+            <li>Item 10</li>
+        </ol>
 
-        </form>
     </body>
+
 </html>
