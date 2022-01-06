@@ -1,0 +1,35 @@
+ul li::after {
+    content: ' - ';
+    background: red;
+    color: white;
+}
+
+ul li::before {
+    content: ' - ';
+    background: green;
+    color: white;
+}
+
+p {
+    font-size: 24px;
+}
+
+p::first-letter {
+    font-size: 60px;
+    font-weight: 200;
+    color: blue;
+    float: left;
+    margin: 0 10px 10px 0;
+}
+
+p::selection {
+    background: yellow;
+}
+
+::placeholder {
+    color: red;
+}
+
+.input::placeholder {
+    color: green
+}
