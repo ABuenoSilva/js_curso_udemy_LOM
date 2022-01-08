@@ -4,6 +4,8 @@
     top: 0;
     left: 0;
     right: 0;
+    bottom: 0;
+    text-align: center;
     width: 100%;
     border-bottom: 0.1rem solid var(--light-gray-color);
 }
@@ -14,6 +16,10 @@
     align-items: center;
     padding-top: 0;
     padding-bottom: 0;
+}
+
+.menu-content, .menu-content ul {
+    flex-direction: column;
 }
 
 .menu h1 {
