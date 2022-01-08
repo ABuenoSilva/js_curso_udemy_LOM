@@ -1,32 +1,68 @@
-.intro {
-
-}
-
-.intro-content {
+.logo-content {
     position: relative;
     top: -6.5rem;
     display: grid;
     grid-template-columns: 1fr 1.5fr;
     gap: var(--gap);
-    height: 100vh;
+    min-height: 100vh;
 }
 
-.intro-text-content, .intro-img {
+.logo-text-content, .logo-img {
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
 }
 
-.intro-img img {
+.logo-img img {
     max-width: 100%;
     height: auto;
 }
 
-.top3-content {
-    height: 100vh;
+.intro-content {
+    min-height: 100vh;
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: column nowrap;
     justify-content: center;
     max-width: 64rem;
     text-align: center;
+}
+
+.top3-content {
+    min-height: 100vh;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+}
+
+.grid-main-heading {
+    margin-bottom: 1rem;
+}
+
+.grid-description {
+    padding-bottom: 3rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--gap);
+    counter-reset: gridCounter;
+}
+
+.grid h3 {
+    font-size: 3rem;
+    position: relative;
+    padding-left: 5rem;
+    margin-bottom: 3rem;
+}
+
+.grid h3::before {
+    counter-increment: gridCounter;
+    content: counter(gridCounter);
+    position: absolute;
+    font-size: 8rem;
+    font-style: italic;
+    top: -4rem;
+    left: -1.5rem;
+    transform: rotate(5deg);
 }
