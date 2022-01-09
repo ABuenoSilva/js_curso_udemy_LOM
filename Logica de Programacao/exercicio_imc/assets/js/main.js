@@ -47,7 +47,6 @@ function getNivelImc(imc){
 
 function criaP () {
     const p = document.createElement('p');
-    p.classList.add();
     return p;
 }
 
