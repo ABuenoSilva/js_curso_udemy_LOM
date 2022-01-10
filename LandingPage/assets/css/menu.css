@@ -3,8 +3,6 @@
     z-index: 1;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
     text-align: center;
     width: 100%;
     border-bottom: 0.1rem solid var(--light-gray-color);
@@ -19,7 +17,7 @@
 }
 
 .menu-content, .menu-content ul {
-    flex-direction: column;
+    flex-direction: row;
 }
 
 .menu h1 {
