@@ -1,0 +1,22 @@
+<%- include('includes/head'); %>
+    <section class="container">
+        <h1>
+            <% if(typeof titulo !== 'undefined') {%>
+                <%= titulo %>
+            <%} else {%>
+                Título não enviado
+            <% } %>
+        </h1>
+        <% numeros.forEach( num => { %>
+            <p><%= num %></p>
+        <% }) %>
+        <p>
+            <%= umaVariavelLocal %>
+        </p>
+        <form action="/" method="post">
+            <label for="cliente">Cliente</label>
+            <input type="text" name="cliente" id="cliente">
+            <button>Enviar</button>
+        </form>
+    </section>
+<%- include('includes/footer'); %>
