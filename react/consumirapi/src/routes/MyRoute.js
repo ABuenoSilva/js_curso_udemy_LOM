@@ -4,7 +4,8 @@ import PropTypes from 'prop-types';
 import history from '../services/history';
 
 export default function MyRoute({ isClosed, ...rest }) {
-  const isLoggedIn = true;
+  console.log('my route');
+  const isLoggedIn = false;
   if (isClosed && !isLoggedIn) {
     return (
       <Navigate
@@ -15,7 +16,7 @@ export default function MyRoute({ isClosed, ...rest }) {
       />
     );
   }
-
+  console.log(rest);
   return rest.children;
 }
 
