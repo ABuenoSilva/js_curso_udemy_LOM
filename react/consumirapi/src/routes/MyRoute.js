@@ -1,22 +1,13 @@
 import React from 'react';
-import { Navigate } from 'react-router-dom';
+import { Navigate, useLocation } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import history from '../services/history';
 
 export default function MyRoute({ isClosed, ...rest }) {
-  console.log('my route');
   const isLoggedIn = false;
+  const location = useLocation();
   if (isClosed && !isLoggedIn) {
-    return (
-      <Navigate
-        to={{
-          pathname: '/login',
-          state: { prevPath: history.location.pathname },
-        }}
-      />
-    );
+    return <Navigate to="/login" state={{ location }} replace />;
   }
-  console.log(rest);
   return rest.children;
 }
 

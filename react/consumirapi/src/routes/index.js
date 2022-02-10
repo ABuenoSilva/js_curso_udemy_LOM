@@ -13,7 +13,6 @@ export default function AppRoutes() {
   return (
     <Routes>
       <Route
-        exact
         path="/"
         element={
           <MyRoute>
@@ -46,7 +45,6 @@ export default function AppRoutes() {
         }
       />
       <Route
-        exact
         path="/login"
         element={
           <MyRoute>
