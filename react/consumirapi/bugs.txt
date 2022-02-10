@@ -1,0 +1,2 @@
+1) Resolver problema de et::ERR_BLOCKED_BY_RESPONSE.NotSameOrigin 200 ao buscar imagens
+2) Resolver problema de navegação pelo menu
