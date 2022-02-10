@@ -1,13 +1,9 @@
 import React from 'react';
 import { FaHome, FaSignInAlt, FaUserAlt } from 'react-icons/fa';
-import { Link, useNavigate } from 'react-router-dom';
-import { Nav } from './styled';
+import { Link } from 'react-router-dom';
 
-function NavPath(e, path) {
-  const navigate = useNavigate();
-  e.preventDefault();
-  navigate(path);
-}
+import { Nav } from './styled';
+import NavPath from '../../routes/NavPath';
 
 function Header() {
   return (

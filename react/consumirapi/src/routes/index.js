@@ -13,6 +13,7 @@ export default function AppRoutes() {
   return (
     <Routes>
       <Route
+        exact
         path="/"
         element={
           <MyRoute>

@@ -6,6 +6,7 @@ import { get } from 'lodash';
 import { Container } from '../../styles/GlobalStyles';
 import { AlunoContainer, ProfilePicture } from './styled';
 import axios from '../../services/axios';
+import NavPath from '../../routes/NavPath';
 
 export default function Alunos() {
   const [alunos, setAlunos] = useState([]);
@@ -32,7 +33,10 @@ export default function Alunos() {
             <span>{aluno.nome}</span>
             <span>{aluno.email}</span>
 
-            <Link to={`/aluno/${aluno.id}/edit`}>
+            <Link
+              to={`/aluno/${aluno.id}/edit`}
+              onClick={(e) => NavPath(e, `/aluno/${aluno.id}/edit`)}
+            >
               <FaEdit size={16} />
             </Link>
 

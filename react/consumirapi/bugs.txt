@@ -1,1 +1,3 @@
 1) Resolver problema de et::ERR_BLOCKED_BY_RESPONSE.NotSameOrigin 200 ao buscar imagens
+2) Resolver problema de quando volta para página de login por não estar logado não rederiza o corpo
+3) Resolver problema de não conseguir navegar após submeter o formulário de registro

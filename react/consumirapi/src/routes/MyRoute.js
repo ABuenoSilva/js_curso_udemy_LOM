@@ -6,8 +6,10 @@ export default function MyRoute({ isClosed, ...rest }) {
   const isLoggedIn = false;
   const location = useLocation();
   if (isClosed && !isLoggedIn) {
-    return <Navigate to="/login" state={{ location }} replace />;
+    console.log('voltando para login');
+    return <Navigate to="/login" state={{ location }} />;
   }
+
   return rest.children;
 }
 
