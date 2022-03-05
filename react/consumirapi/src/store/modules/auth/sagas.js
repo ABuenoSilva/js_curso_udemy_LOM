@@ -1,10 +1,23 @@
-// import { call, put, all, takeLatest } from 'redux-saga/effects';
-import { all, takeLatest } from 'redux-saga/effects';
-import * as types from '../types';
-// import * as actions from './actions';
+import { call, put, all, takeLatest } from 'redux-saga/effects';
+import { toast } from 'react-toastify';
 
-function* loginRequest(payload) {
-  yield console.log('SAGA', payload);
+import * as types from '../types';
+import axios from '../../../services/axios';
+import * as actions from './actions';
+import history from '../../../services/history';
+
+function* loginRequest({ payload }) {
+  try {
+    const response = yield call(axios.post, '/tokens', payload);
+    yield put(actions.loginSuccess({ ...response.data }));
+    toast.success('Login efetuado');
+    axios.defaults.headers.Authorization = `Bearer ${response.data.token}`;
+    history.push('/');
+  } catch (e) {
+    console.log(e);
+    toast.error('Usuário ou senha inválidos');
+    yield put(actions.loginFailure());
+  }
 }
 
 export default all([takeLatest(types.LOGIN_REQUEST, loginRequest)]);

@@ -1,15 +1,15 @@
-/* eslint-disable react-hooks/rules-of-hooks */
 import React, { useState } from 'react';
 import { toast } from 'react-toastify';
 import { isEmail } from 'validator';
 import { useDispatch } from 'react-redux';
-// import axios from '../../services/axios';
 
 import { Container } from '../../styles/GlobalStyles';
 import { Form } from './styled';
 import * as actions from '../../store/modules/auth/actions';
 
-export default function Login() {
+function Login() {
+  const dispatch = useDispatch();
+
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -17,9 +17,6 @@ export default function Login() {
     e.preventDefault();
 
     let formErros = false;
-
-    // eslint-disable-next-line react-hooks/rules-of-hooks
-    const dispatch = useDispatch();
 
     if (!isEmail(email)) {
       formErros = true;
@@ -68,3 +65,5 @@ export default function Login() {
     </Container>
   );
 }
+
+export default Login;
