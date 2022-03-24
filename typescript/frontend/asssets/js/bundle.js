@@ -68,6 +68,51 @@ function shouldSenfForm(form) {
 
 /***/ }),
 
+/***/ "./src/A0033-example/A0033-example.ts":
+/*!********************************************!*\
+  !*** ./src/A0033-example/A0033-example.ts ***!
+  \********************************************/
+/***/ ((__unused_webpack_module, exports) => {
+
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+class VideoPlayer {
+    constructor(videoPlayerElements) {
+        this.videoPlayer = videoPlayerElements.videoPlayer;
+        this.playButton = videoPlayerElements.playButton;
+        this.stopButton = videoPlayerElements.stopButton;
+    }
+    iniciarEventos() {
+        this.playButton.addEventListener('click', () => this.playToggle());
+        this.stopButton.addEventListener('click', () => this.stop());
+    }
+    playToggle() {
+        if (this.videoPlayer.paused) {
+            this.videoPlayer.play();
+            this.playButton.innerText = 'Pause';
+        }
+        else {
+            this.videoPlayer.pause();
+            this.playButton.innerText = 'Play';
+        }
+    }
+    stop() {
+        this.videoPlayer.pause();
+        this.videoPlayer.currentTime = 0;
+        this.playButton.innerText = 'Play';
+    }
+}
+exports["default"] = VideoPlayer;
+const videoPlayer = new VideoPlayer({
+    videoPlayer: document.querySelector('.video'),
+    playButton: document.querySelector('.play'),
+    stopButton: document.querySelector('.stop'),
+});
+videoPlayer.iniciarEventos();
+
+
+/***/ }),
+
 /***/ "./node_modules/validator/lib/isByteLength.js":
 /*!****************************************************!*\
   !*** ./node_modules/validator/lib/isByteLength.js ***!
@@ -598,6 +643,7 @@ var exports = __webpack_exports__;
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 __webpack_require__(/*! ./form-control */ "./src/A0019-exercicio/form-control.ts");
+__webpack_require__(/*! ../A0033-example/A0033-example */ "./src/A0033-example/A0033-example.ts");
 
 })();
 
