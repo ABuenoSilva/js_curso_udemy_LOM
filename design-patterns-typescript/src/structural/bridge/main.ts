@@ -23,3 +23,4 @@ clientCode(radioRemoteControl);
 
 const tvRemoteControl = new RemoteControlWithVolume(tv);
 clientCode(tvRemoteControl);
+console.log(tvRemoteControl);
