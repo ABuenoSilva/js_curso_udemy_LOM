@@ -1,29 +1,17 @@
 import { GetStaticProps } from 'next';
+import HomePage from '../containers/homepage';
+import { getAllPosts } from '../data/posts/get-all-posts';
 import { PostData } from '../domain/posts/post';
-
-const getPosts = async (): Promise<PostData[]> => {
-  const posts = await fetch(
-    'https://intense-temple-08818.herokuapp.com/api/posts?populate=*',
-  );
-  const jsonPosts = await posts.json();
-  return jsonPosts['data'];
-};
-
-export default function Home({ posts }: HomeProps) {
-  return (
-    <div>
-      {posts.map((post) => (
-        <h2 key={post.attributes.slug}>{post.attributes.title}</h2>
-      ))}
-    </div>
-  );
-}
 
 export type HomeProps = {
   posts: PostData[];
 };
 
+export default function Home({ posts }: HomeProps) {
+  return <HomePage posts={posts} />;
+}
+
 export const getStaticProps: GetStaticProps = async () => {
-  const posts: PostData[] = await getPosts();
+  const posts: PostData[] = await getAllPosts();
   return { props: { posts }, revalidate: 5 };
 };

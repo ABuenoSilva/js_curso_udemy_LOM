@@ -16,24 +16,22 @@ export type PostAttributes = {
 };
 
 export type PostCover = {
-  data: CoverData[];
+  data: [{ id: number; attributes: CoverData }];
 };
 
 export type CoverData = CoverFormat & {
   alternativeText: string;
   caption: string;
-  formats: CoverFormats;
+  formats: {
+    large: CoverFormat;
+    small: CoverFormat;
+    medium: CoverFormat;
+    thumbnail: CoverFormat;
+  };
   previewUrl: string;
   provider: string;
   createdAt: string;
   updatedAt: string;
-};
-
-export type CoverFormats = {
-  large: CoverFormat;
-  small: CoverFormat;
-  medium: CoverFormat;
-  thumbnail: CoverFormat;
 };
 
 export type CoverFormat = {
