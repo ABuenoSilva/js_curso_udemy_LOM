@@ -2,6 +2,7 @@ import { Footer } from '../../components/Footer';
 import { Header } from '../../components/Header';
 import { Heading } from '../../components/Heading';
 import { MainContainer } from '../../components/MainContainer';
+import { PostContainer } from '../../components/PostContainer';
 import { PostCover } from '../../components/PostCover';
 import { PostDetails } from '../../components/PostDetails';
 import { PostAttributes } from '../../domain/posts/post';
@@ -25,7 +26,7 @@ export const Post = ({ post }: PostProps) => {
           category={post.categorie.data.attributes.name}
           date={post.createdAt}
         />
-        <div dangerouslySetInnerHTML={{ __html: post.content }}></div>
+        <PostContainer content={post.content} />
       </MainContainer>
       <Footer />
     </>
